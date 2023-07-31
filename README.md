@@ -150,6 +150,8 @@ function App(){
 Much easier! And, if we create a new page for our website, we don't have to
 remember to include the `NavBar` component within that new page.
 
+Remember to remove the `NavBar` portion of your JSX from the `Home` component after adding this code to `App`.
+
 ## Using react-router-dom's Outlet Component
 
 If you've opened the code up in your browser, you might have noticed that our
@@ -171,6 +173,7 @@ Including it in a component is pretty straightforward:
 
 ```jsx
 import { Outlet } from "react-router-dom";
+import NavBar from "./components/NavBar";
 
 function App(){
     return(
@@ -238,9 +241,7 @@ import users from "../data";
 import UserCard from "../components/UserCard";
 
 function Home(){
-    const userList = users.map(user =>{
-    <UserCard key={user.id} {...user}/>
-  })
+    const userList = users.map(user => <UserCard key={user.id} {...user}/>)
 
   return (
       <main>
@@ -249,7 +250,9 @@ function Home(){
         {userList}
       </main>
   );
-}
+};
+
+export default Home;
 ```
 
 Try navigating to one of our user profile routes. You should see that profile
