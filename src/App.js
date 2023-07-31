@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import  users from "./data";
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <header>
         <NavBar />
       </header>
-      <Outlet />
+      <Outlet context={users}/>
     </>
   );
 }
