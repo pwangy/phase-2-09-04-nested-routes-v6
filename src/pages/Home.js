@@ -3,7 +3,7 @@ import UserCard from "../components/UserCard";
 
 function Home(){
     const users = useOutletContext();
-    const userList = users.map(user => <UserCard key={user.id} {...user}/>);
+    const userList = users.map(user => <UserCard key={user.id} user={user}/>);
 
   return (
       <main>
