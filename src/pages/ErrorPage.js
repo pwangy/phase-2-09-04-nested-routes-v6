@@ -6,7 +6,7 @@ function ErrorPage() {
 
 	return (
 		<main>
-			<h1>Whoops! Something went wrong!</h1>
+			<h1>I'M DISPLEASED!!!</h1>
 		</main>
 )}
 

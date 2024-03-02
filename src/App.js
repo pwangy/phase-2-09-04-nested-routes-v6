@@ -5,7 +5,7 @@ import NavBar from './components/NavBar'
 const App = ()  => {
   const [users, setUsers] = useState([])
 
-  useEffect(() =>{
+  useEffect(() => {
     fetch("http://localhost:4000/users")
     .then(r => r.json())
     .then(data => setUsers(data))
